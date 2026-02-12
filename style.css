@@ -53,13 +53,15 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
   background: rgba(244, 240, 230, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   padding: 10px 0;
 }
 
-.site-nav {
+/* innehållet i navet (centrerat) */
+.nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -219,19 +221,22 @@ h1 {
 .section {
   width: min(var(--max), calc(100% - 40px));
   margin-inline: auto;
-  padding: 84px 0;
+  padding: 48px 0;
 }
 
 .section.alt {
   background: rgba(15, 42, 31, 0.05);
-  border-top: 1px solid rgba(15, 42, 31, 0.06);
-  border-bottom: 1px solid rgba(15, 42, 31, 0.06);
+  border: 1px solid rgba(15, 42, 31, 0.08);
+  border-radius: var(--radius);
+  padding: 36px 24px;
 }
 
 .section h2 {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   font-size: clamp(26px, 2.5vw, 34px);
   font-weight: 900;
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
 }
 
 .card {
@@ -239,6 +244,16 @@ h1 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card p {
+  margin: 0 0 10px;
+  color: rgba(17, 17, 17, 0.82);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
 }
 
 .grid {
@@ -259,8 +274,8 @@ h1 {
 }
 
 .price {
-  margin-top: 18px;
-  padding: 18px;
+  margin-top: 24px;
+  padding: 16px 20px;
   border-radius: var(--radius);
   background: var(--green);
   color: var(--cream);
@@ -347,8 +362,8 @@ h1 {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(15, 42, 31, 0.12);
+
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
 }
 
 .product figcaption {
@@ -357,6 +372,7 @@ h1 {
 
 /* Gör produktkort klickbara */
 .product {
+  background: transparent;
   cursor: pointer;
   transition:
     transform 0.12s ease,
