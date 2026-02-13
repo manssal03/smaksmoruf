@@ -34,6 +34,12 @@ body {
   line-height: 1.55;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .skip-link {
   position: absolute;
   left: -999px;
