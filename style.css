@@ -32,6 +32,8 @@ body {
   color: var(--black);
   background: var(--cream);
   line-height: 1.55;
+
+  position: relative;
 }
 
 .skip-link {
@@ -234,6 +236,9 @@ h1 {
   border: 1px solid rgba(15, 42, 31, 0.08);
   border-radius: var(--radius);
   padding: 36px 24px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section h2 {
@@ -404,6 +409,8 @@ h1 {
   grid-template-columns: 1fr 1.2fr;
   gap: 24px;
   align-items: start;
+
+  min-width: 0;
 }
 
 .recipe-figure {
@@ -421,6 +428,11 @@ h1 {
   max-width: 60ch;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 720px) {
   .nav-list {
     display: none;
@@ -433,5 +445,8 @@ h1 {
   }
   .recipe-text {
     max-width: 100%;
+  }
+  .section.alt {
+    padding: 28px 16px;
   }
 }
