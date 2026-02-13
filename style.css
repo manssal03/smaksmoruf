@@ -10,6 +10,11 @@
   --max: 1080px;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
