@@ -32,8 +32,6 @@ body {
   color: var(--black);
   background: var(--cream);
   line-height: 1.55;
-
-  position: relative;
 }
 
 .skip-link {
