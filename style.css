@@ -437,6 +437,42 @@ img {
   height: auto;
 }
 
+.ingredients {
+  margin-top: 10px;
+  border-top: 1px solid rgba(15, 42, 31, 0.1);
+  padding-top: 10px;
+}
+
+.ingredients summary {
+  cursor: pointer;
+  font-weight: 900;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(244, 240, 230, 0.85);
+}
+
+.ingredients summary::-webkit-details-marker {
+  display: none;
+}
+
+.ingredients summary::after {
+  content: "▾";
+  font-weight: 900;
+}
+
+.ingredients[open] summary::after {
+  content: "▴";
+}
+
+.ingredients p {
+  margin: 10px 0 0;
+}
+
 @media (max-width: 720px) {
   .nav-list {
     display: none;

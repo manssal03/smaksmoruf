@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Klick på produktkort
   products.forEach(card => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
+
+      if(e.target.closest("details") || e.target.closest("summary") || e.target.closest("a")) return;
+
       const id = card.dataset.recipe;
       setPressed(buttons, id);
       showRecipe(id);
